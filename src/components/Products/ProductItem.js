@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 // import { useDispatch } from 'react-redux';
 
-import { useStore } from '../../hooks-store/store';
 import Card from '../UI/Card';
+import { useStore } from '../../hooks-store/store';
 import './ProductItem.css';
 // import { toggleFav } from '../../store/actions/products';
 // import ProductsContext from '../../context/products-context';
 
-const ProductItem = (props) => {
+const ProductItem = React.memo((props) => {
   const dispatch = useStore(false)[1]; // no need for state, false is for shouldListen to prevent it from reexecution when rendering
   // const dispatch = useDispatch();
   // const toggleFav = useContext(ProductsContext).toggleFav;
@@ -32,6 +32,6 @@ const ProductItem = (props) => {
       </div>
     </Card>
   );
-};
+});
 
 export default ProductItem;

@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 
 import FavoriteItem from '../components/Favorites/FavoriteItem';
 import { useStore } from '../hooks-store/store';
-import ProductsContext from '../context/products-context';
+// import ProductsContext from '../context/products-context';
 import './Products.css';
 
 const Favorites = (props) => {

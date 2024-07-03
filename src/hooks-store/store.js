@@ -25,7 +25,7 @@ export const useStore = (shouldListen = true) => {
         listeners = listeners.filter((li) => li !== setState);
       }
     };
-  }, [setState]);
+  }, [setState, shouldListen]);
 
   return [globalState, dispatch];
 };

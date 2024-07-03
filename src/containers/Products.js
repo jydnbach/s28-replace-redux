@@ -13,7 +13,7 @@ const Products = (props) => {
 
   return (
     <ul className="products-list">
-      {state.productList.map((prod) => (
+      {state.products.map((prod) => (
         <ProductItem
           key={prod.id}
           id={prod.id}
