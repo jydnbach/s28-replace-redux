@@ -2,15 +2,18 @@ import React, { useContext } from 'react';
 // import { useSelector } from 'react-redux';
 
 import ProductItem from '../components/Products/ProductItem';
-import productsContext from '../context/products-context';
+// import productsContext from '../context/products-context';
+import { useStore } from '../hooks-store/store';
 import './Products.css';
 
 const Products = (props) => {
   // const productList = useSelector((state) => state.shop.products);
-  const productList = useContext(productsContext).products;
+  // const productList = useContext(productsContext).products;
+  const state = useStore()[0]; // no need for dispatch
+
   return (
     <ul className="products-list">
-      {productList.map((prod) => (
+      {state.productList.map((prod) => (
         <ProductItem
           key={prod.id}
           id={prod.id}
