@@ -8,7 +8,7 @@ import './ProductItem.css';
 // import ProductsContext from '../../context/products-context';
 
 const ProductItem = (props) => {
-  const dispatch = useStore()[1]; // no need for state
+  const dispatch = useStore(false)[1]; // no need for state, false is for shouldListen to prevent it from reexecution when rendering
   // const dispatch = useDispatch();
   // const toggleFav = useContext(ProductsContext).toggleFav;
 
